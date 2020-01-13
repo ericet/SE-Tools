@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<title>Transfer Steem-Engine Token to Multiply Accounts</title>
+</head>
+
+<body>
+	<div class="container pt-3">
+		<h1 style="display: inline;"">Transfer Steem-Engine Token to Multiply Accounts</h1>
+		<h5 style="display: inline;">by <a href="https://steemit.com/@ericet" target="_blank" rel="nofollow"">@ericet</a></h5>
+
+		<form id="transfer" method="POST">
+			<div class="row">
+				<div class="col-md-10">
+					<div class="form-group">
+						<label for="username" class="sr-only">Username</label>
+						<input type="text" name="username" id="username" autocomplete="off" class="form-control"
+							placeholder="Steem ID" required>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10">
+					<div class="form-group">
+						<label for="active-key" class="sr-only">Active Key</label>
+						<input type="password" name="active-key" id="active-key" autocomplete="off" class="form-control"
+							placeholder="Private Active Key" required>
+				    </div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-10">
+					<div class="form-group">
+						<label for="amount" class="sr-only">Amount</label>
+						<input type="number" step="any" name="amount" id="amount" autocomplete="off" class="form-control"
+							placeholder="Amount" required>
+				    </div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-10">
+					<div class="form-group">
+						<select name="token" id="token" autocomplete="off" class="form-control"
+							placeholder="Token">
+							</select>
+				    </div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-10">
+					<div class="form-group">
+						<label for="memo" class="sr-only">Memo</label>
+						<input type="text" name="memo" id="memo" autocomplete="off" class="form-control"
+							placeholder="Memo">
+				    </div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-10">
+						<div class="form-group">
+						<textarea name="accounts" id="accounts" autocomplete="off" class="form-control"
+							placeholder="One account per line with or without @" rows="10" required/></textarea>
+						</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-3">
+					<button class="btn btn-success btn-block" type="submit">Transfer</button>
+				</div>
+			</div>
+			<div class="row">
+					<div class="col-md-10">
+							<div class="form-group">
+							<textarea name="log" id="log" autocomplete="off" class="form-control" rows="15" style="width:100%;background:black;color:yellow"/></textarea>
+							</div>
+					</div>
+				</div>
+		</form>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/steem/dist/steem.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/dsteem@^0.10.1/dist/dsteem.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sscjs@latest/dist/ssc.min.js"></script>
+	<script src="js/transferTokens.js"></script>
+
+</body>
+
+</html>
