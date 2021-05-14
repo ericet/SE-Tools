@@ -1,5 +1,5 @@
 const client = new dsteem.Client('https://api.steem.buzz');
-const ssc = new SSC('https://api.steem-engine.com/rpc/');
+const ssc = new SSC('https://api.steem-engine.net/rpc/');
 steem.api.setOptions({ url: 'https://api.steem.buzz' });
 
 // Checking if the already exists
